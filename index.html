@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EB BILL CALCULATOR</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>EB BILL</h2>
+ 
+        <div class="inputdiv">
+         <input type="number" id="input" placeholder=" enter your units">
+        </div>
+        <div><button type="submit" onclick="f1()">
+            click 
+        </button></div>
+ 
+        <div id="result">
+ 
+        </div>
+ 
+     </div>
+     <script>
+        function f1(){
+           var ele=Number(document.getElementById("input").value)
+
+           if (ele <=100 ) {
+            var res=document.getElementById("result")
+               res.textContent="free"+"of cost"
+           } 
+           else if(ele >100 && ele <=200){
+            var res=document.getElementById("result")
+            var amount=ele*3.5;
+               res.textContent="RS "+amount
+
+           }
+           else if(ele >201 && ele <=500){
+            var res=document.getElementById("result")
+            var amount=ele*4.6;
+               res.textContent="RS "+amount
+
+           }
+            else {
+                var res=document.getElementById("result")
+            var amount=ele*6.6;
+               res.textContent=amount+"RS "+amount
+            
+           }
+        }
+       
+     </script>
+</body>
+</html>
